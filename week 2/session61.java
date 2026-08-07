@@ -1,17 +1,12 @@
-import java.util.*;
+class Solution {
+    public int[] buildArray(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            ans[i] = nums[nums[i]];
+        }
 
-        int n = sc.nextInt();
-        int[] a = new int[n];
-
-        for(int i = 0; i < n; i++)
-            a[i] = sc.nextInt();
-
-        for(int i = 0; i < n; i++)
-            System.out.print(a[a[i]] + " ");
+        return ans;
     }
 }
-
