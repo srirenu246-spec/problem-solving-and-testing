@@ -1,19 +1,12 @@
-import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
-        int[] a = new int[2 * n];
-
-        for (int i = 0; i < 2 * n; i++) {
-            a[i] = sc.nextInt();
-        }
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int[] ans = new int[2 * n];
 
         for (int i = 0; i < n; i++) {
-            System.out.print(a[i] + " ");
-            System.out.print(a[i + n] + " ");
+            ans[2 * i] = nums[i];
+            ans[2 * i + 1] = nums[i + n];
         }
+
+        return ans;
     }
 }
