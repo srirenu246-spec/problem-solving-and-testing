@@ -1,0 +1,26 @@
+import java.util.*;
+
+class CarParking {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] slot = new int[3];
+
+        System.out.print("Enter car number: ");
+        int car = sc.nextInt();
+
+        for (int i = 0; i < 3; i++) {
+            if (slot[i] == 0) {
+                slot[i] = car;
+                System.out.println("Car parked in slot " + (i + 1));
+                break;
+            }
+        }
+
+        System.out.println("Parking slots:");
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Slot " + (i + 1) + ": " + slot[i]);
+        }
+    }
+}
